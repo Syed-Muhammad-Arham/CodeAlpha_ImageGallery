@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery Task</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Photo Gallery</h1>
+        <p>Web Development Task 1</p>
+      </header>
+
+      <div class="filter-buttons">
+        <button class="btn active" onclick="filterSelection('all')">All</button>
+        <button class="btn" onclick="filterSelection('nature')">Nature</button>
+        <button class="btn" onclick="filterSelection('tech')">
+          Technology
+        </button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item nature">
+          <img src="https://picsum.photos/id/1015/600/400" alt="Nature 1" />
+        </div>
+        <div class="gallery-item nature">
+          <img src="https://picsum.photos/id/1016/600/400" alt="Nature 2" />
+        </div>
+        <div class="gallery-item nature">
+          <img src="https://picsum.photos/id/1018/600/400" alt="Nature 3" />
+        </div>
+
+        <div class="gallery-item tech">
+          <img src="https://picsum.photos/id/1/600/400" alt="Tech 1" />
+        </div>
+        <div class="gallery-item tech">
+          <img src="https://picsum.photos/id/180/600/400" alt="Tech 2" />
+        </div>
+        <div class="gallery-item tech">
+          <img src="https://picsum.photos/id/201/600/400" alt="Tech 3" />
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+
+      <img id="lightbox-img" src="" alt="Full View" />
+
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
